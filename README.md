@@ -14,7 +14,7 @@
   # redis RQ Wokrer run
   python manage.py run_worker
 ```
-## ** Deepgeo lib will be changed**
+## **Deepgeo lib will be changed**
   - when [deepgeoconvert repositorty](https://github.com/rdj94/deepgeoconvert) updated
 
 # Reference
