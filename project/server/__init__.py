@@ -5,7 +5,7 @@ import os
 
 from flask import Flask
 from flask_bootstrap import Bootstrap
-# from deepgeo import Engine
+from deepgeo import Engine
 # instantiate the extensions
 bootstrap = Bootstrap()
 
@@ -30,10 +30,10 @@ def create_app(script_info=None):
     from project.server.main.views import main_blueprint
 
     app.engine = Engine()
-    app.engine.add_model('mscoco_maskrcnn','maskrcnn','/home/flask-redis-queue_test/config/maskrcnn_mscoco_config.json')
-    app.engine.add_model('teeth','maskrcnn', '/home/flask-redis-queue_test/config/maskrcnn_teeth_config.json')
-    app.engine.add_model('roaddamage','yolo', '/home/flask-redis-queue_test/config/yolo_road-damage_config.json')
-    app.engine.add_model('mscoco_yolo','yolo', '/home/flask-redis-queue_test/config/yolo_mscoco_config.json')
+    app.engine.add_model('mscoco_maskrcnn','maskrcnn','/home/DeepGeoAPI/config/maskrcnn_mscoco_config.json')
+    app.engine.add_model('teeth','maskrcnn', '/home/DeepGeoAPI/config/maskrcnn_teeth_config.json')
+    app.engine.add_model('roaddamage','yolo', '/home/DeepGeoAPI/config/yolo_road-damage_config.json')
+    app.engine.add_model('mscoco_yolo','yolo', '/home/DeepGeoAPI/config/yolo_mscoco_config.json')
 
     app.register_blueprint(main_blueprint)
 

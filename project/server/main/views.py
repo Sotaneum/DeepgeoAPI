@@ -13,7 +13,7 @@ main_blueprint = Blueprint("main", __name__,)
 
 @main_blueprint.route("/", methods=["GET"])
 def home():
-    # models = current_app.engine.get_added_model()
+    models = current_app.engine.get_added_model()
     return render_template("main/home.html")
 
 
