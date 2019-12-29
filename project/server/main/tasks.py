@@ -8,7 +8,7 @@ def detect(processor,alias_model_name:str,url:str):
     start = time.time()
     processor.read(uri=url)
     processor.detect(alias_model_name)
-    processor.locate(locator_name='dummy',filter_name='dummy')
+    processor.locate()
     end = time.time()
     time_elapsed = end - start
     print(f"Time elapsed: {time_elapsed} ms")
