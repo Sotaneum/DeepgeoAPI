@@ -2,7 +2,7 @@
 
 
 import os
-
+import numpy as np
 from flask import Flask
 from flask_bootstrap import Bootstrap
 from flask.json import JSONEncoder
@@ -11,7 +11,7 @@ from deepgeo import Engine
 # instantiate the extensions
 bootstrap = Bootstrap()
 
-class CustomJSONEncoder(json.JSONEncoder):
+class CustomJSONEncoder(JSONEncoder):
     def default(self, obj):
         if isinstance(obj, np.integer):
             return int(obj)
