@@ -3,7 +3,7 @@
 
 import redis
 from rq import Queue, Connection
-from flask import render_template, Blueprint, jsonify, request, current_app
+from flask import render_template, Blueprint, jsonify, request, current_app,url_for
 
 from project.server.main.tasks import detect
 from deepgeo import ProcessorFactory
@@ -16,12 +16,12 @@ def home():
     models = current_app.engine.get_added_model()
     return render_template("main/home.html",models=models)
 
-@main_blueprint.route("/task", methods=["POST","GET"])
+@main_blueprint.route("/task", methods=["GET"])
 def run_task():
     # print("Posted Data : {}".format(data))
-    task_type = request.form["uri"]
-    model_name = request.form["model_name"]
-    file_type = request.form["file_type"]
+    task_type = request.args.get('url')
+    model_name = request.args.get('model_name')
+    file_type = request.args.get('file_type')
 #    print(file_type)
 #    print(model_name)
 #    print(task_type)
@@ -37,8 +37,6 @@ def run_task():
         }    
     return jsonify(response_object), 202
    
-
-
 @main_blueprint.route("/tasks/<task_id>", methods=["GET"])
 def get_status(task_id):
     with Connection(redis.from_url(current_app.config["REDIS_URL"])):
@@ -58,4 +56,3 @@ def get_status(task_id):
     else:
         response_object = {"status": "error"}
     return jsonify(response_object)
-

@@ -13,9 +13,9 @@ $('.btn').on('click', function() {
     data: { 
       file_type: _file_type,
       model_name: _model_name,
-      uri: _uri
+      url: _uri
     },
-    method: 'POST',
+    method: 'GET',
     dataType: 'JSON'
   })
   .done((res) => {
