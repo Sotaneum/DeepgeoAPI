@@ -3,7 +3,6 @@
 	"MODEL_FILE_NAME" : "mscoco.weights",
 	"MODEL_PATH" : "/home/DeepGeoAPI/weights",
 	"CATEGORY": [
-		"bg",
 		"person",
 		"bicycle",
 		"car",
