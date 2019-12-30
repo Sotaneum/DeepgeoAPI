@@ -25,12 +25,17 @@ def run_task():
 #    print(file_type)
 #    print(model_name)
 #    print(task_type)
+    if task_type and model_name and file_type is not None:
+        status = "add task success"
+    else:
+        status = "Failed None data included"
+
     with Connection(redis.from_url(current_app.config["REDIS_URL"])):
         q = Queue()
         processor = ProcessorFactory.create(engine=current_app.engine,type_name=file_type)
         task = q.enqueue(detect,processor=processor,alias_model_name=model_name,url=task_type)
         response_object = {
-            "status": "success",
+            "status": status,
             "data": {
                 "task_id": task.get_id()
             }
