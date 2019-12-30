@@ -132,7 +132,7 @@
 		56
 	],
 	"MODEL_FILE_NAME": "mask_rcnn_coco.h5",
-	"MODEL_PATH":"/home/flask-redis-queue_test/weights",
+	"MODEL_PATH":"/home/DeepGeoAPI/weights",
 	"MODEL_URI":"",
 	"NAME": "MASK_RCNN",
 	"NUM_CLASSES": 80,

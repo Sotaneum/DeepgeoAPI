@@ -1,7 +1,7 @@
 {
 	"VERSION" : "",
 	"MODEL_FILE_NAME" : "road-damage.weights",
-	"MODEL_PATH" : "/home/flask-redis-queue_test/weights",
+	"MODEL_PATH" : "/home/DeepGeoAPI/weights",
 	"CATEGORY" : ["D00","D01","D10","D11","D20","D40","D43","D44"],
 	"CONFIG" : "road-damage.cfg",
 	"MEMO" : "road damage detect"

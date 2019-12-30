@@ -1,7 +1,7 @@
 {
 	"VERSION" : "",
 	"MODEL_FILE_NAME" : "mscoco.weights",
-	"MODEL_PATH" : "/home/flask-redis-queue_test/weights",
+	"MODEL_PATH" : "/home/DeepGeoAPI/weights",
 	"CATEGORY": [
 		"bg",
 		"person",

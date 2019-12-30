@@ -20,3 +20,5 @@ migrations
 .3gf
 .vscode/
 .vscode/*
+.tmp/*
+.tmp
