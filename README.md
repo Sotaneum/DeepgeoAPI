@@ -38,8 +38,8 @@
   - UI 설정 및 URL 입력후 Submit Button을 클릭시 redis Queue에 task가 등록되며 task들은 1초마다 status를 반환합니다.(ui를 통한 request가 task status를 1초마다 볼 수 없습니다.)
   - 이때 taskID는 output data를 조회할수 있는 key입니다.
   - 현재 API Method는 2개입니다.
-    1. file 다운로드 및 예측 태스크 등록 /task?url=(file_url)&model_name=(alias_model_name)%file_type=(image or video)
-    2. 위의 ( 및 ) 는 실제 들어가지않습니다.
+    1. file 다운로드 및 예측 태스크 등록 /task?url=(file_url)&model_name=(alias_model_name)&file_type=(image or video)
+    2. 위의 ( 및 ) 는 실제 들어가지않습니다. 또한 task 등록성공시 task_id와 태스크 등록 성공 여부를 반환합니다.
     3. queue에 등록한 task들의 상태 및 예측 결과값 조회 /tasks/task_id
     4. Output는 image와 video 각각 Geojson AppendixC와 AppendixD의 format을 따릅니다.
     
