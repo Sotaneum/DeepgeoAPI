@@ -55,7 +55,7 @@ def get_status(task_id):
                 "task_id": task.get_id(),
                 "task_status": task.get_status(),
                 "task_result": task.result,
-                "message": "Task queued at {} {}jobs queued".format(task.enqueued_at.strftime('%a, %d %b %Y %H:%M:%S'),q_len)
+                "message": "Task queued at {} {} jobs queued".format(task.enqueued_at.strftime('%a, %d %b %Y %H:%M:%S'),q_len)
             },
         }
     else:
