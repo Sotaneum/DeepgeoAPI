@@ -2,7 +2,6 @@
 
 $( document ).ready(() => {
   console.log('Sanity Check!');
-  
 });
 
 $('.btn').on('click', function() {
