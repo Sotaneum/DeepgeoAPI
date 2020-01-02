@@ -31,9 +31,9 @@
           </div>
           <br>
           <h5>How to use UbranAI RestAPI </h5>
-          <h6>Add task Request: $.ajax({url: '/task',data: {file_type: _file_type,model_name: _model_name,url: _uri},method: 'GET',dataType: 'JSON'}) Return : object = {"status": status,"data": {"task_id": added_taskid}} </h6>
+          <h6>Add task Request: {url: '/task',data: {file_type: _file_type,model_name: _model_name,url: _uri},method: 'GET',dataType: 'JSON'}) Return : object = {"status": status,"data": {"task_id": added_taskid}} </h6>
           <p>host/task?url=(file_url)&model_name=(model_name)&file_type=(video or image)</p>
-          <h6>Get Status and Result $.ajax({url: `/tasks/${taskID}`,method: 'GET'})</h6>
+          <h6>Get Status and Result {url: `/tasks/${taskID}`,method: 'GET'})</h6>
           <p>host/tasks/task_id</p>
         </div>
       </div>
