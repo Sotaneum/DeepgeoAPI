@@ -1,4 +1,4 @@
-# UrbanAI RESTful API 
+# UrbanAI RESTful API Server
   - implementation using flask with redis rq worker 
   - you can see deepgeo_task in web
 
