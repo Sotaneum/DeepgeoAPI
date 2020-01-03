@@ -25,9 +25,18 @@
 ### Add image detection task API
 - GET API for adding task
 
- http://urbanai_rest_server_url/{url: '/task',data: {file_type: _file_type,model_name: _model_name,url: _uri},method: 'GET',dataType: 'JSON'}) Return : object = {"status": status,"data": {"task_id": added_taskid}}
-host/task?url=(file_url)&model_name=(model_name)&file_type=(video or image)
+ http://urbanai_rest_server_url/task?key1=value1&key2=value2&key3=value3...
+ 
+ |key  | value |
+| ------------- | ------------- |
+| url  | {http://*, file://*}  |
+| file_type  | {iamge, video} |
+| model_name | {mscoco_maskrcnn, road_damage, mscoco_yolo } |
+ 
+- Return value 
 
+ ex: {"data":{"task_id":"886b8916-9785-4e71-b4a4-f1551c67a4a6"},"status":"add task success"}
+ 
 - GET API for task
 
 Get Status and Result {url: `/tasks/${taskID}`,method: 'GET'})
