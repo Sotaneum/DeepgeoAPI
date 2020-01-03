@@ -42,7 +42,7 @@
 http://your_urbanai_rest_server_url/tasks/${taskID}
 
 
-### examples of Image Detection GET API 
+### Examples of Image Detection GET API 
 - GET API for adding image detection
 
   http://djr.urbanai.net/task?url=http://infolab.kunsan.ac.kr:8080/files/attach/images/675/386/002/1c4398adf662ce8b38b2de4b250987af.jpg&model_name=mscoco_maskrcnn&file_type=image
@@ -55,7 +55,7 @@ http://your_urbanai_rest_server_url/tasks/${taskID}
 
   http://djr.urbanai.net/tasks/886b8916-9785-4e71-b4a4-f1551c67a4a6
   
-### examples of video Detection GET API 
+### Examples of Video Detection GET API 
 - GET API for adding video detection
 
 http://djr.urbanai.net/task?url=http://urbanai.net/data/media/20190524_133559_NF.mp4&model_name=mscoco_maskrcnn&file_type=video
