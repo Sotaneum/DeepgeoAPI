@@ -33,6 +33,7 @@ http://urbanai_rest_server_url/tasks/task_id
 
 # example of Image Detection GET API 
 - GET API for adding image detection
+
   http://djr.urbanai.net/task?url=http://infolab.kunsan.ac.kr:8080/files/attach/images/675/386/002/1c4398adf662ce8b38b2de4b250987af.jpg&model_name=mscoco_maskrcnn&file_type=image
   
 - will return the task id. 
@@ -40,16 +41,20 @@ http://urbanai_rest_server_url/tasks/task_id
   {"data":{"task_id":"886b8916-9785-4e71-b4a4-f1551c67a4a6"},"status":"add task success"}
   
 - Get the detection result
+
   http://djr.urbanai.net/tasks/886b8916-9785-4e71-b4a4-f1551c67a4a6
   
 # example of video Detection GET API 
 - GET API for adding video detection
+
 http://djr.urbanai.net/task?url=http://urbanai.net/data/media/20190524_133559_NF.mp4&model_name=mscoco_maskrcnn&file_type=video
 
 - will return the task id. 
+
 {"data":{"task_id":"7fd0662d-a8a3-4988-a9cc-4f062f1e8bbc"},"status":"add task success"}
 
 - Get the detection result
+
   http://djr.urbanai.net/tasks/7fd0662d-a8a3-4988-a9cc-4f062f1e8bbc
   
 - Not finished yet
