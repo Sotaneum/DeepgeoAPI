@@ -1,4 +1,4 @@
-# Deepgeo API 
+UrbanAI RESTful API 
   - implementation using flask with redis rq worker 
   - you can see deepgeo_task in web
 
@@ -19,6 +19,46 @@
 
 # Reference
   - [flask-redis-queue](https://github.com/mjhea0/flask-redis-queue) 
+  
+## how to use UrbanAI RESTful API
+
+# Add image detection task API
+- GET API for adding task
+ http://urbanai_rest_server_url/{url: '/task',data: {file_type: _file_type,model_name: _model_name,url: _uri},method: 'GET',dataType: 'JSON'}) Return : object = {"status": status,"data": {"task_id": added_taskid}}
+host/task?url=(file_url)&model_name=(model_name)&file_type=(video or image)
+
+- GET API for task
+Get Status and Result {url: `/tasks/${taskID}`,method: 'GET'})
+http://urbanai_rest_server_url/tasks/task_id
+
+# example of Image Detection GET API 
+- GET API for adding image detection
+  http://djr.urbanai.net/task?url=http://infolab.kunsan.ac.kr:8080/files/attach/images/675/386/002/1c4398adf662ce8b38b2de4b250987af.jpg&model_name=mscoco_maskrcnn&file_type=image
+  
+- will return the task id. 
+  
+  {"data":{"task_id":"886b8916-9785-4e71-b4a4-f1551c67a4a6"},"status":"add task success"}
+  
+- Get the detection result
+  http://djr.urbanai.net/tasks/886b8916-9785-4e71-b4a4-f1551c67a4a6
+  
+# example of video Detection GET API 
+- GET API for adding video detection
+http://djr.urbanai.net/task?url=http://urbanai.net/data/media/20190524_133559_NF.mp4&model_name=mscoco_maskrcnn&file_type=video
+
+- will return the task id. 
+{"data":{"task_id":"7fd0662d-a8a3-4988-a9cc-4f062f1e8bbc"},"status":"add task success"}
+
+- Get the detection result
+  http://djr.urbanai.net/tasks/7fd0662d-a8a3-4988-a9cc-4f062f1e8bbc
+  
+- Not finished yet
+{"data":{"message":"Task queued at Fri, 03 Jan 2020 07:49:15 0 jobs queued","task_id":"a88a2227-a068-49fd-ab90-5f6c6519d2d0","task_result":null,"task_status":"failed"},"status":"success"}
+
+- Finished successfully
+ {"data":{"message":"Task queued at Fri, 03 Jan 2020 07:49:15 0 jobs queued","task_id":"a88a2227-a068-49fd-ab90-5f6c6519d2d0","task_result":null,"task_status":"failed"},"status":"success"}
+  
+  
 
 # DeepGeo Docker Introduce
   - 연구실 nas의 postgeomedia_deepgeo_api_docker의 docker에는 현 저장소의 파일과 Deepgeo library가 site-package에 설치되어있습니다.
