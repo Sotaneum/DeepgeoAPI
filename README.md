@@ -2,7 +2,7 @@
   - implementation using flask with redis rq worker 
   - you can see deepgeo_task in web
 
-## requirements
+## Requirements
   - redis-server
   - redis worker
   - Deepgeo
@@ -25,7 +25,7 @@
 ### Add image detection task API
 - GET API for adding task
 
- http://urbanai_rest_server_url/task?key1=value1&key2=value2&key3=value3...
+ http://your_urbanai_rest_server_url/task?key1=value1&key2=value2&key3=value3...
  
  |key  | value |
 | ------------- | ------------- |
@@ -37,10 +37,10 @@
 
  ex: {"data":{"task_id":"886b8916-9785-4e71-b4a4-f1551c67a4a6"},"status":"add task success"}
  
-- GET API for task
+- GET API for detection result
 
-Get Status and Result {url: `/tasks/${taskID}`,method: 'GET'})
-http://urbanai_rest_server_url/tasks/task_id
+http://your_urbanai_rest_server_url/tasks/${taskID}
+
 
 ### example of Image Detection GET API 
 - GET API for adding image detection
@@ -55,7 +55,7 @@ http://urbanai_rest_server_url/tasks/task_id
 
   http://djr.urbanai.net/tasks/886b8916-9785-4e71-b4a4-f1551c67a4a6
   
-### example of video Detection GET API 
+### examples of video Detection GET API 
 - GET API for adding video detection
 
 http://djr.urbanai.net/task?url=http://urbanai.net/data/media/20190524_133559_NF.mp4&model_name=mscoco_maskrcnn&file_type=video
