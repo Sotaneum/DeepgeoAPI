@@ -17,12 +17,12 @@
 ## **Deepgeo lib will be changed**
   - when [deepgeoconvert repositorty](https://github.com/rdj94/deepgeoconvert) updated
 
-# Reference
+### Reference
   - [flask-redis-queue](https://github.com/mjhea0/flask-redis-queue) 
   
 ## how to use UrbanAI RESTful API
 
-# Add image detection task API
+## Add image detection task API
 - GET API for adding task
 
  http://urbanai_rest_server_url/{url: '/task',data: {file_type: _file_type,model_name: _model_name,url: _uri},method: 'GET',dataType: 'JSON'}) Return : object = {"status": status,"data": {"task_id": added_taskid}}
@@ -33,7 +33,7 @@ host/task?url=(file_url)&model_name=(model_name)&file_type=(video or image)
 Get Status and Result {url: `/tasks/${taskID}`,method: 'GET'})
 http://urbanai_rest_server_url/tasks/task_id
 
-# example of Image Detection GET API 
+### example of Image Detection GET API 
 - GET API for adding image detection
 
   http://djr.urbanai.net/task?url=http://infolab.kunsan.ac.kr:8080/files/attach/images/675/386/002/1c4398adf662ce8b38b2de4b250987af.jpg&model_name=mscoco_maskrcnn&file_type=image
@@ -46,7 +46,7 @@ http://urbanai_rest_server_url/tasks/task_id
 
   http://djr.urbanai.net/tasks/886b8916-9785-4e71-b4a4-f1551c67a4a6
   
-# example of video Detection GET API 
+### example of video Detection GET API 
 - GET API for adding video detection
 
 http://djr.urbanai.net/task?url=http://urbanai.net/data/media/20190524_133559_NF.mp4&model_name=mscoco_maskrcnn&file_type=video
