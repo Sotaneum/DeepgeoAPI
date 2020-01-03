@@ -20,9 +20,9 @@
 ### Reference
   - [flask-redis-queue](https://github.com/mjhea0/flask-redis-queue) 
   
-## how to use UrbanAI RESTful API
+## How to use UrbanAI RESTful API
 
-## Add image detection task API
+### Add image detection task API
 - GET API for adding task
 
  http://urbanai_rest_server_url/{url: '/task',data: {file_type: _file_type,model_name: _model_name,url: _uri},method: 'GET',dataType: 'JSON'}) Return : object = {"status": status,"data": {"task_id": added_taskid}}
