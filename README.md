@@ -42,7 +42,7 @@
 http://your_urbanai_rest_server_url/tasks/${taskID}
 
 
-### example of Image Detection GET API 
+### examples of Image Detection GET API 
 - GET API for adding image detection
 
   http://djr.urbanai.net/task?url=http://infolab.kunsan.ac.kr:8080/files/attach/images/675/386/002/1c4398adf662ce8b38b2de4b250987af.jpg&model_name=mscoco_maskrcnn&file_type=image
