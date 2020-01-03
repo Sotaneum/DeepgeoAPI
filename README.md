@@ -30,7 +30,7 @@
  |key  | value |
 | ------------- | ------------- |
 | url  | {http://*, file://*}  |
-| file_type  | {iamge, video} |
+| file_type  | {image, video} |
 | model_name | {mscoco_maskrcnn, road_damage, mscoco_yolo } |
  
 - Return value 
