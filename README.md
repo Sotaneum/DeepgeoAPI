@@ -68,11 +68,11 @@ http://djr.urbanai.net/task?url=http://urbanai.net/data/media/20190524_133559_NF
 
   http://djr.urbanai.net/tasks/7fd0662d-a8a3-4988-a9cc-4f062f1e8bbc
   
-- Not finished yet
+- Not finished yet : task_result==null
 
 {"data":{"message":"Task queued at Fri, 03 Jan 2020 07:49:15 0 jobs queued","task_id":"a88a2227-a068-49fd-ab90-5f6c6519d2d0","task_result":null,"task_status":"failed"},"status":"success"}
 
-- Finished successfully
+- Finished successfully  : task_result == GeoJSON with UrbanAI Results
 
  {"data":{"message":"Task queued at Fri, 03 Jan 2020 07:49:15 0 jobs queued","task_id":"a88a2227-a068-49fd-ab90-5f6c6519d2d0","task_result":null,"task_status":"failed"},"status":"success"}
   
