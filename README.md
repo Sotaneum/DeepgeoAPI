@@ -58,10 +58,9 @@ http://your_urbanai_rest_server_url/tasks/${taskID}
 ### Examples of Video Detection GET API 
 - GET API for adding video detection
 
-http://djr.urbanai.net/task?url=http://urbanai.net/data/media/20190524_133559_NF.mp4&model_name=mscoco_maskrcnn&file_type=video
+http://djr.urbanai.net/task?url=http://data2.u-gis.net/deepcitymap//data/media/20190524_133559_NF.mp4&model_name=mscoco_maskrcnn&file_type=video
 
 - will return the task id. 
-
 {"data":{"task_id":"7fd0662d-a8a3-4988-a9cc-4f062f1e8bbc"},"status":"add task success"}
 
 - Get the detection result
