@@ -23,7 +23,7 @@
 ## How to use UrbanAI RESTful API
 
 ### Add image detection task API
-- GET API for adding task
+o GET API for adding image detection task
 
  http://your_urbanai_rest_server_url/task?key1=value1&key2=value2&key3=value3...
  
@@ -37,13 +37,13 @@
 
  ex: {"data":{"task_id":"886b8916-9785-4e71-b4a4-f1551c67a4a6"},"status":"add task success"}
  
-- GET API for detection result
+o GET API for detection result
 
 http://your_urbanai_rest_server_url/tasks/${taskID}
 
 
 ### Examples of Image Detection GET API 
-- GET API for adding image detection
+- GET API for adding image detection task
 
   http://api.urbanai.net/task?url=http://infolab.kunsan.ac.kr:8080/files/attach/images/675/386/002/1c4398adf662ce8b38b2de4b250987af.jpg&model_name=mscoco_maskrcnn&file_type=image
   
@@ -51,19 +51,19 @@ http://your_urbanai_rest_server_url/tasks/${taskID}
   
   {"data":{"task_id":"886b8916-9785-4e71-b4a4-f1551c67a4a6"},"status":"add task success"}
   
-- Get the detection result
+- GET API for the detection result
 
   http://api.urbanai.net/tasks/886b8916-9785-4e71-b4a4-f1551c67a4a6
   
 ### Examples of Video Detection GET API 
-- GET API for adding video detection
+o GET API for adding video detection
 
 http://api.urbanai.net/task?url=http://data2.u-gis.net/deepcitymap//data/media/20190524_133559_NF.mp4&model_name=mscoco_maskrcnn&file_type=video
 
 - will return the task id. 
 {"data":{"task_id":"7fd0662d-a8a3-4988-a9cc-4f062f1e8bbc"},"status":"add task success"}
 
-- Get the detection result
+o GET API for the detection result
 
   http://api.urbanai.net/tasks/7fd0662d-a8a3-4988-a9cc-4f062f1e8bbc
   
